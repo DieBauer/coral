@@ -1,8 +1,14 @@
+sudo: required
+
 language: scala
-
 scala: 2.11.6
-
 jdk: oraclejdk8
+
+services:
+  - docker
+
+before_install:
+  - docker run -d -p 127.0.0.1:9042:9042 cassandra:latest
 
 script:
   - mvn clean test install
@@ -10,4 +16,3 @@ script:
 cache:
   directories:
     - $HOME/.m2
-
