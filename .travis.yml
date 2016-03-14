@@ -8,7 +8,7 @@ services:
   - docker
 
 before_install:
-  - docker run -d -p 127.0.0.1:9042:9042 cassandra:latest
+  - docker run -d -p 127.0.0.1:9042:9042 cassandra:2.2
 
 script:
   - mvn clean test install
