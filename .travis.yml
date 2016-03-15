@@ -8,7 +8,8 @@ services:
   - docker
 
 before_install:
-  - docker run -d -p 127.0.0.1:9042:9042 cassandra:2.1
+  - sed -i.bak -e 's|https://nexus.codehaus.org/snapshots/|https://oss.sonatype.org/content/repositories/codehaus-snapshots/|g' ~/.m2/settings.xml
+  - docker run -d -p 127.0.0.1:9042:9042 cassandra:2.2
 
 script:
   - mvn clean test install -U
