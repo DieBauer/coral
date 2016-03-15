@@ -375,8 +375,8 @@ object TestHelper {
 
 	def prepareTables()(implicit config: CoralConfig, cassandra: TestActorRef[CassandraActor]) {
 		val scripts = Array(
-			//s"""{ "query": "drop keyspace if exists ${config.coral.cassandra.keyspace};" } """,
-			//s"""{ "query": "create keyspace ${config.coral.cassandra.keyspace} with replication = { 'class': 'SimpleStrategy', 'replication_factor': 1 };" } """,
+			s"""{ "query": "drop keyspace if exists ${config.coral.cassandra.keyspace};" } """,
+			s"""{ "query": "create keyspace ${config.coral.cassandra.keyspace} with replication = { 'class': 'SimpleStrategy', 'replication_factor': 1 };" } """,
 			s"""{ "query": "use keyspace ${config.coral.cassandra.keyspace};" } """,
 			s"""{ "query": "drop table if exists ${config.coral.cassandra.keyspace}.${config.coral.cassandra.userTable};" } """,
 			s"""{ "query": "drop table if exists ${config.coral.cassandra.keyspace}.${config.coral.cassandra.authorizeTable};" } """,

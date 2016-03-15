@@ -6,7 +6,13 @@
     <artifactId>coral-runtime</artifactId>
     <version>0.0.131</version>
     <packaging>jar</packaging>
-
+        <repositories>
+            <repository>
+                <id>bintray</id>
+                <name>Bintray</name>
+                <url>http://dl.bintray.com/krasserm/maven/</url>
+            </repository>
+        </repositories>
     <build>
         <plugins>
             <plugin>
@@ -192,9 +198,9 @@
 
         <!-- In /lib folder -->
         <dependency>
-            <groupId>io.coral</groupId>
-    	    <artifactId>akka-persistence-cassandra-coral</artifactId>
-            <version>0.6.23-SNAPSHOT</version>
+            <groupId>com.github.krasserm</groupId>
+    	    <artifactId>akka-persistence-cassandra_2.11</artifactId>
+            <version>0.6</version>
         </dependency>
 
         <!-- Other dependencies -->
@@ -232,7 +238,7 @@
         <dependency>
             <groupId>com.datastax.cassandra</groupId>
             <artifactId>cassandra-driver-core</artifactId>
-            <version>2.1.4</version>
+            <version>2.1.9</version>
         </dependency>
         <dependency>
             <groupId>org.uncommons.maths</groupId>
