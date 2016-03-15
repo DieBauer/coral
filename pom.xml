@@ -92,29 +92,6 @@
                     </execution>
                 </executions>
             </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-install-plugin</artifactId>
-                <version>2.5.2</version>
-                <executions>
-                    <execution>
-                        <id>install-external</id>
-                        <phase>clean</phase>
-                        <configuration>
-                            <file>${basedir}/lib/akka-persistence-cassandra-coral_2.11-0.6-SNAPSHOT.jar</file>
-                            <repositoryLayout>default</repositoryLayout>
-                            <groupId>com.github.krasserm</groupId>
-    		                <artifactId>akka-persistence-cassandra-coral_2.11</artifactId>
-                            <version>0.6-SNAPSHOT</version>
-                            <packaging>jar</packaging>
-                            <generatePom>true</generatePom>
-                        </configuration>
-                        <goals>
-                            <goal>install-file</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
         </plugins>
     </build>
 
@@ -196,7 +173,7 @@
             <groupId>com.typesafe.akka</groupId>
             <artifactId>akka-testkit_2.11</artifactId>
             <version>2.4.1</version>
-		</dependency>
+	</dependency>
         <dependency>
             <groupId>io.spray</groupId>
             <artifactId>spray-testkit_2.11</artifactId>
@@ -216,7 +193,7 @@
         <!-- In /lib folder -->
         <dependency>
             <groupId>io.coral</groupId>
-    		<artifactId>akka-persistence-cassandra-coral</artifactId>
+    	    <artifactId>akka-persistence-cassandra-coral</artifactId>
             <version>0.6.23-SNAPSHOT</version>
         </dependency>
 
